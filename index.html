@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for Jubel Dela Cruz">
+    <meta name="author" content="Jubel Dela Cruz">
+    <title>Course Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="https://i.ibb.co/fpq46PB/profile.jpg" alt="Profile Image" class="profile-img">
+        <h1>Jubel Dela Cruz</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="https://github.com/jubelanne">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/in/jubeldelacruz/">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Course Work Box -->
+        <div class="half-screen box">
+            <h2>Course Work</h2>
+        </div>
+
+        <!-- Toronto Canada Box -->
+        <div class="half-screen box">
+            <h2>Toronto, Canada</h2>
+            <a href="https://ibb.co/Yy5j0wB">
+                <img src="https://i.ibb.co/pRHXh5j/toronto-skyline-mural.jpg" alt="Toronto Skyline" border="0">
+            </a>
+            <p>Toronto Skyline</p>
+        </div>
+    </div>
+
+    <!-- Web and Computer Programming Certificate Section -->
+    <div class="certificate-box">
+        <h2>Web and Computer Programming Certificate</h2>
+        <!-- Course Filter Tabs -->
+        <div class="tabs">
+            <button class="tab-btn" onclick="filterCourses('all')">ALL</button>
+            <button class="tab-btn" onclick="filterCourses('cse')">CSE</button>
+            <button class="tab-btn" onclick="filterCourses('wdd')">WDD</button>
+        </div>
+
+        <!-- Course List -->
+        <div id="courseList"></div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© <span id="currentyear"></span> ⭐ Jubel Dela Cruz ⭐ Canada</p>
+        <p id="lastModified">Last modification: </p>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+
+</html>
