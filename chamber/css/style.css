@@ -1,128 +1,28 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and overall page styling */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Hero Section */
+#hero {
+    position: relative;
+    text-align: center;
+    padding: 0; /* Remove padding to ensure the full image is visible */
     background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+    background-image: url('https://i.ibb.co/Qn8RxyR/Toronto-Skyline-Wide-2014.jpg');
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center center; /* Center the image horizontally and vertically */
+    width: 100%; /* Ensure the container spans the entire width */
+    height: 100vh; /* Ensure the hero section takes up the full height of the viewport */
 }
 
-/* Header styling */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    color: #2C3E50;
-}
-
-.toggle-buttons {
-    text-align: center;
-    margin: 20px 0;
-}
-
-button {
-    font-size: 1em;
-    padding: 10px;
-    background-color: #3498db;
+#hero .cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
 }
 
-button:hover {
-    background-color: #2980b9;
-}
-
-/* Main container styling */
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 1200px;
-}
-
-/* Album grid styling */
-.album {
-    padding: 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #3498db;
-}
-
-/* Flex grid for images */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.temple-item {
-    text-align: center;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-figcaption {
-    font-size: 1.2em;
-    margin-top: 10px;
-    color: #2C3E50;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 1em;
-}
-
-footer p {
-    color: #777;
-}
-
-p a {
+#hero .btn {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
     text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-}
-
-p a:hover {
-    text-decoration: underline;
-}
-
-.list .temple-item p {
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    border-radius: 5px;
 }

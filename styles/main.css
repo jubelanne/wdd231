@@ -1,157 +1,109 @@
-/* Reset default margins and padding */
-* {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Body and General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
-}
-
-h1,
-h2 {
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Header Styles */
 header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-/* Navigation Bar Styles */
-nav {
-    background-color: black;
+    background-color: #333;
     padding: 10px 0;
+    color: white;
     text-align: center;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
-nav li {
+header nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
-nav a {
+header nav ul li a {
     color: white;
-    font-size: 18px;
-    text-transform: uppercase;
+    text-decoration: none;
 }
 
-/* Content Box Styles */
-.content {
+#hero {
+    background-color: #f4f4f4;
+    position: relative;
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+}
+
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Events Section */
+#events {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#events ul li {
+    margin-bottom: 10px;
+}
+
+/* Weather Section */
+#weather {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+/* Spotlight Section */
+#spotlights {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+#spotlight-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    justify-content: space-around;
 }
 
-.box {
-    width: 48%;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.half-screen {
-    flex: 1;
-    margin: 0 10px;
-}
-
-/* Course Filter Tabs */
-.tabs {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tab-btn {
-    padding: 10px 20px;
-    background-color: #ddd;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.tab-btn:hover {
-    opacity: 0.8;
-}
-
-/* Button Styles for Course Filter */
-.tab-btn.green {
-    background-color: #4CAF50;
-    color: black;
-}
-
-.tab-btn.grey {
-    background-color: grey;
-    color: black;
-}
-
-/* Button Classes */
-.tab-btn.green,
-.tab-btn.grey {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.tab-btn.green:hover,
-.tab-btn.grey:hover {
-    opacity: 0.8;
-}
-
-/* Certificate Box */
-.certificate-box {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.course-item {
-    margin: 10px;
-}
-
-.course-item.completed {
-    background-color: #f1f1f1;
-}
-
-/* Footer Styles */
 footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 10px;
-    background-color: black;
+    background-color: #333;
     color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px;
 }

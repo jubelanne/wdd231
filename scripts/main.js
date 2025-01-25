@@ -1,53 +1,73 @@
-// Array of courses
-const courses = [
-    { name: "CSE 110", type: "cse", completed: false },
-    { name: "WDD 130", type: "wdd", completed: false },
-    { name: "CSE 111", type: "cse", completed: false },
-    { name: "CSE 210", type: "cse", completed: false },
-    { name: "WDD 131", type: "wdd", completed: false },
-    { name: "WDD 231", type: "wdd", completed: false }
-];
-
-// Function to filter and display courses
-function filterCourses(type) {
-    const courseList = document.getElementById("courseList");
-    courseList.innerHTML = "";
-
-    const filteredCourses = type === "all" ? courses : courses.filter(course => course.type === type);
-    const courseItems = filteredCourses.map(course => {
-        const courseItem = document.createElement("div");
-        courseItem.classList.add("course-item");
-
-        // Assign the appropriate class for course completion
-        if (course.completed) {
-            courseItem.classList.add("completed");
-        }
-
-        // Create a button for each course and apply appropriate styling based on course type
-        const courseButton = document.createElement("button");
-        courseButton.textContent = course.name;
-
-        // Apply green class for CSE 110, WDD 130, CSE 111, CSE 210
-        if (course.name === "CSE 110" || course.name === "WDD 130" || course.name === "CSE 111" || course.name === "CSE 210") {
-            courseButton.classList.add("green");
-        } 
-        // Apply grey class for WDD 231 and WDD 131
-        else if (course.name === "WDD 231" || course.name === "WDD 131") {
-            courseButton.classList.add("grey");
-        }
-
-        courseItem.appendChild(courseButton);
-        return courseItem;
-    });
-
-    courseItems.forEach(item => courseList.appendChild(item));
-}
-
-// Display the current year dynamically
+// Set Current Year in Footer
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Display the last modified date dynamically
-document.getElementById("lastModified").textContent += document.lastModified;
+// Set Last Modified Date in Footer
+document.getElementById("modDate").textContent = document.lastModified;
 
-// Call the function to display all courses by default
-filterCourses("all");
+// Fetch Weather Data from OpenWeatherMap API
+const apiKey = 'your-api-key'; // Replace with your OpenWeatherMap API key
+const city = 'Toronto'; // Replace with your city's name
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+  .then(response => response.json())
+  .then(data => {
+    const weatherInfo = `
+      <p>Temperature: ${data.main.temp.toFixed(0)}°C</p>
+      <p>Weather: ${capitalizeWords(data.weather.map(w => w.description).join(', '))}</p>
+      <h3>3-Day Forecast:</h3>
+      <ul>
+        ${data.daily.slice(0, 3).map(day => `
+          <li>
+            ${new Date(day.dt * 1000).toLocaleDateString()}: ${day.temp.day.toFixed(0)}°C
+          </li>
+        `).join('')}
+      </ul>
+    `;
+    document.getElementById('weather-info').innerHTML = weatherInfo;
+  });
+
+// Function to Capitalize Each Word
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, char => char.toUpperCase());
+}
+
+// Member Spotlights (example)
+const members = [
+  {
+    company: 'Company A',
+    logo: 'https://i.ibb.co/gryw6J3/ai-generated-free-branding-identity-corporate-logo-a-design-vector.jpg',
+    phone: '123-456-7890',
+    address: '123 Business St, Toronto',
+    website: 'https://companya.com',
+    membershipLevel: 'Gold'
+  },
+  {
+    company: 'Company B',
+    logo: 'https://i.ibb.co/56cCgvC/company-b-logo-wspacer.png',
+    phone: '098-765-4321',
+    address: '456 Commerce Rd, Toronto',
+    website: 'https://companyb.com',
+    membershipLevel: 'Silver'
+  }
+];
+
+function loadSpotlights() {
+  const spotlightContainer = document.getElementById('spotlight-container');
+  const randomMembers = members.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+  randomMembers.forEach(member => {
+    const spotlightCard = `
+      <div class="spotlight-card">
+        <img src="${member.logo}" alt="${member.company} Logo">
+        <h3>${member.company}</h3>
+        <p>Phone: ${member.phone}</p>
+        <p>Address: ${member.address}</p>
+        <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p>Membership Level: ${member.membershipLevel}</p>
+      </div>
+    `;
+    spotlightContainer.innerHTML += spotlightCard;
+  });
+}
+
+window.onload = loadSpotlights;
