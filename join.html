@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Membership Join</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chamber of Commerce Membership</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="thankyou.html" method="GET">
+            <h2>Apply for Membership</h2>
+            
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+
+            <label for="org-title">Organization Title:</label>
+            <input type="text" id="org-title" name="org-title" pattern="[A-Za-z\s-]{7,}" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@example.com">
+
+            <label for="phone">Mobile Phone:</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+
+            <label for="business-name">Business Name:</label>
+            <input type="text" id="business-name" name="business-name" required autocomplete="organization">
+
+            <label for="membership-level">Select Membership Level:</label>
+            <select id="membership-level" name="membership-level" required>
+                <option value="np">NP Membership</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+            </select>
+
+            <label for="business-description">Business Description:</label>
+            <textarea id="business-description" name="business-description" required></textarea>
+
+            <input type="hidden" id="timestamp" name="timestamp" value="" />
+            
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <!-- Membership Level Cards -->
+        <div id="membership-cards">
+            <div class="card" data-level="np">
+                <h3>NP Membership</h3>
+                <p>No fee for non-profit organizations.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+            <div class="card" data-level="bronze">
+                <h3>Bronze Membership</h3>
+                <p>Affordable starting option.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+            <div class="card" data-level="silver">
+                <h3>Silver Membership</h3>
+                <p>Access to more benefits.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+            <div class="card" data-level="gold">
+                <h3>Gold Membership</h3>
+                <p>Premium features and discounts.</p>
+                <a href="#" class="card-link">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce</p>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="np-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>NP Membership Benefits</h4>
+            <p>Non-profit organizations receive free membership with access to basic features.</p>
+        </div>
+    </div>
+    <div class="modal" id="bronze-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Bronze Membership Benefits</h4>
+            <p>Bronze members gain access to basic business features and limited event discounts.</p>
+        </div>
+    </div>
+    <div class="modal" id="silver-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Silver Membership Benefits</h4>
+            <p>Silver members enjoy premium advertising positions and additional event benefits.</p>
+        </div>
+    </div>
+    <div class="modal" id="gold-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h4>Gold Membership Benefits</h4>
+            <p>Gold members receive exclusive discounts, premium training, and spotlight event features.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
