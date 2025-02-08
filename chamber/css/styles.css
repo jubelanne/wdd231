@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Header, Navigation, and Footer Styles */
+header, nav, footer {
+    background: #2C3E50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #F39C12;
+}
+
+/* Main content */
+main {
+    margin: 20px;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    gap: 10px;
+}
+
+/* Card Layout */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.card address {
+    font-style: normal;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+}
+
+.card button {
+    background-color: #F39C12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #e67e22;
+}
+
+/* Visitor Message Sidebar */
+#sidebar {
+    background-color: #F39C12;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Layout - Small Screens */
+.cards-container {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 641px) {
+    /* Medium Screens */
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Large Screens */
+    .cards-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* Hover Effect for Larger Screens */
+.card:hover {
+    transform: scale(1.05);
+}
