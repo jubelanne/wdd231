@@ -1,0 +1,196 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Overall Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #F39C12;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #F39C12;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Safety Section */
+.safety {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.safety h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.safety p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Destination Section */
+.destinations {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.destinations h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.destinations p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .safety h2,
+    .destinations h2,
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional Styling */
+h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #F39C12;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
