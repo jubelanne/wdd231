@@ -8,7 +8,9 @@ body {
 }
 
 /* Header, Navigation, and Footer Styles */
-header, nav, footer {
+header,
+nav,
+footer {
     background: #2C3E50;
     color: white;
     padding: 20px;
@@ -106,6 +108,7 @@ main {
 }
 
 @media (min-width: 641px) {
+
     /* Medium Screens */
     .cards-container {
         grid-template-columns: 1fr 1fr;
@@ -113,6 +116,7 @@ main {
 }
 
 @media (min-width: 1025px) {
+
     /* Large Screens */
     .cards-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
