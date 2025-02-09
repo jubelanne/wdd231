@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - Solo Travel for Women</title>
-    <link rel="stylesheet" href="/Solo-Travel-for-Women/assets/css/styles.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Custom Styles for the Hero Image */
+        .hero-img-container {
+            position: relative;
+            margin: 0;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        /* Remove the space between the image and the next section */
+        .hero {
+            margin-bottom: 0;
+        }
+
+        /* Ensure the page scrolls properly to the bottom */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -15,7 +57,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="destinations.html">Destinations</a></li>
-                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
                     <li><a href="community.html">Community</a></li>
                 </ul>
             </nav>
@@ -26,41 +68,47 @@
     <section class="hero">
         <div class="container">
             <h2>Essential Resources for Women Travelers</h2>
-            <p>Explore valuable tools, tips, and resources to help you prepare for your solo journey. From packing checklists to safety apps, we’ve got you covered.</p>
+            <p>Explore valuable tools, tips, and resources to help you prepare for your solo journey. From packing
+                checklists to safety apps, we’ve got you covered.</p>
+            <!-- Resources Section -->
+            <section class="resources">
+                <div class="container">
+                    <h2>Travel Resources</h2>
+                    <p>These resources will help you plan your solo travel adventure and stay safe along the way.</p>
+
+                    <h3>Travel Apps for Solo Travelers</h3>
+                    <p>Download essential travel apps for safety, navigation, and communication. From offline maps to
+                        emergency contact services, these apps will make your trip smoother.</p>
+
+                    <h3>Solo Travel Packing List</h3>
+                    <p>Don’t miss a thing with our comprehensive packing list. We’ve compiled everything from clothing
+                        essentials to personal safety items, ensuring you're fully prepared for your adventure.</p>
+
+                    <h3>Women-Only Hostels</h3>
+                    <p>Looking for a safe and welcoming environment while traveling solo? Consider staying in women-only
+                        hostels. These accommodations provide comfort and security, giving you peace of mind during your
+                        travels.</p>
+
+                    <h3>Solo Travel Blogs</h3>
+                    <p>Find inspiration and valuable insights from experienced solo female travelers. Discover new
+                        destinations, solo travel tips, and empowering stories.</p>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Stay Informed and Ready</h2>
+                    <p>Make sure you're well-prepared for your solo journey with the best resources and support
+                        available. Begin your adventure with the right tools today!</p>
+                </div>
+
         </div>
-    </section>
 
-    <!-- Resources Section -->
-    <section class="resources">
-        <div class="container">
-            <h2>Travel Resources</h2>
-            <p>These resources will help you plan your solo travel adventure and stay safe along the way.</p>
-
-            <h3>Travel Apps for Solo Travelers</h3>
-            <p>Download essential travel apps for safety, navigation, and communication. From offline maps to emergency contact services, these apps will make your trip smoother.</p>
-
-            <h3>Solo Travel Packing List</h3>
-            <p>Don’t miss a thing with our comprehensive packing list. We’ve compiled everything from clothing essentials to personal safety items, ensuring you're fully prepared for your adventure.</p>
-
-            <h3>Women-Only Hostels</h3>
-            <p>Looking for a safe and welcoming environment while traveling solo? Consider staying in women-only hostels. These accommodations provide comfort and security, giving you peace of mind during your travels.</p>
-
-            <h3>Solo Travel Blogs</h3>
-            <p>Find inspiration and valuable insights from experienced solo female travelers. Discover new destinations, solo travel tips, and empowering stories.</p>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Stay Informed and Ready</h2>
-            <p>Make sure you're well-prepared for your solo journey with the best resources and support available. Begin your adventure with the right tools today!</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Solo Travel for Women. All rights reserved.</p>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Solo Travel for Women. All rights reserved.</p>
+        </footer>
 </body>
+
 </html>
